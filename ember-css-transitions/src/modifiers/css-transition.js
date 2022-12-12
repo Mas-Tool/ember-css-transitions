@@ -297,6 +297,9 @@ if (macroCondition(dependencySatisfies('ember-modifier', '>=3.2.0 || 4.x'))) {
 
       // add first class right away
       this.addClass(className);
+      
+      yield nextTick();
+      
       this.addClass(activeClassName);
 
       yield nextTick();
